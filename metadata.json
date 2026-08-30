@@ -1,0 +1,7 @@
+{
+  "name": "Canger Smash Burgers",
+  "description": "Interactive application for Canger - Crispy Smash Burgers restaurant and menu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

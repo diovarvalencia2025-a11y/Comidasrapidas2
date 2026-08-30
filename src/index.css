@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Quicksand:wght@700&display=swap");
+
+@theme {
+  --font-display: "Bebas Neue", "Prompt", sans-serif;
+  --font-sans: "Prompt", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #25140e;
+  overflow-x: hidden;
+}
+
+/* Cross-browser scrollbar hiding */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Micro motion keyframes */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes card-pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card-pop {
+  animation: card-pop 0.45s ease both;
+}
+
+/* 16-layer speckle / print-grain text mask */
+.grunge-text {
+  width: max-content;
+  flex-shrink: 0;
+  -webkit-mask-image: 
+    radial-gradient(circle 0.9px at 12% 18%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 38% 8%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 74% 22%, transparent 99%, black 100%),
+    radial-gradient(circle 1.2px at 89% 34%, transparent 99%, black 100%),
+    radial-gradient(circle 0.7px at 25% 45%, transparent 99%, black 100%),
+    radial-gradient(circle 1.0px at 58% 42%, transparent 99%, black 100%),
+    radial-gradient(circle 1.3px at 82% 56%, transparent 99%, black 100%),
+    radial-gradient(circle 0.9px at 15% 68%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 47% 72%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 69% 83%, transparent 99%, black 100%),
+    radial-gradient(circle 1.2px at 91% 89%, transparent 99%, black 100%),
+    radial-gradient(circle 0.7px at 33% 92%, transparent 99%, black 100%),
+    radial-gradient(circle 1.0px at 5% 40%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 52% 20%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 6% 94%, transparent 99%, black 100%),
+    radial-gradient(circle 0.9px at 95% 10%, transparent 99%, black 100%);
+  mask-image: 
+    radial-gradient(circle 0.9px at 12% 18%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 38% 8%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 74% 22%, transparent 99%, black 100%),
+    radial-gradient(circle 1.2px at 89% 34%, transparent 99%, black 100%),
+    radial-gradient(circle 0.7px at 25% 45%, transparent 99%, black 100%),
+    radial-gradient(circle 1.0px at 58% 42%, transparent 99%, black 100%),
+    radial-gradient(circle 1.3px at 82% 56%, transparent 99%, black 100%),
+    radial-gradient(circle 0.9px at 15% 68%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 47% 72%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 69% 83%, transparent 99%, black 100%),
+    radial-gradient(circle 1.2px at 91% 89%, transparent 99%, black 100%),
+    radial-gradient(circle 0.7px at 33% 92%, transparent 99%, black 100%),
+    radial-gradient(circle 1.0px at 5% 40%, transparent 99%, black 100%),
+    radial-gradient(circle 0.8px at 52% 20%, transparent 99%, black 100%),
+    radial-gradient(circle 1.1px at 6% 94%, transparent 99%, black 100%),
+    radial-gradient(circle 0.9px at 95% 10%, transparent 99%, black 100%);
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-size: 46px 46px;
+  mask-size: 46px 46px;
+}
